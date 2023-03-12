@@ -5,9 +5,9 @@
     "passes": 5,
     "pending": 0,
     "failures": 0,
-    "start": "2023-03-12T20:26:31.709Z",
-    "end": "2023-03-12T20:27:27.397Z",
-    "duration": 45288,
+    "start": "2023-03-12T20:41:51.491Z",
+    "end": "2023-03-12T20:42:56.155Z",
+    "duration": 51077,
     "testsRegistered": 5,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "d1424162-81f8-43b7-aff1-9a681bb20bd2",
+      "uuid": "989b8d2d-ad22-4dcd-8d06-9f7e22493a23",
       "title": "",
       "fullFile": "cypress/e2e/login_negative.cy.js",
       "file": "cypress/e2e/login_negative.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "112221b3-f172-46ed-97fa-45ca0f399de9",
+          "uuid": "4b9a42db-a2b4-4064-9b9b-0bb13f164e15",
           "title": "Negative: Fail to login: PFS-2, PFS-3, PFS-4, PFS-5, PFS-6, PFS-7",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Fail to login without domain && Fail to login with empty email ->TC#: PFS-2, PFS-3",
               "fullTitle": "Negative: Fail to login: PFS-2, PFS-3, PFS-4, PFS-5, PFS-6, PFS-7 Fail to login without domain && Fail to login with empty email ->TC#: PFS-2, PFS-3",
               "timedOut": null,
-              "duration": 7881,
+              "duration": 7080,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "loginPage.navigateToSignIn();\nloginPage.clickSignInBlue();\nloginPage.enterUserName('alex.gmobile.test');\nloginPage.clickPasswordField();\ncy.get(loc.email_error).contains('Enter a valid email.').should('exist');\nloginPage.clearUserNameField();\nloginPage.clearPasswordField();\ncy.get(loc.email_error).contains('Please enter your email address.').should('exist');",
               "err": {},
-              "uuid": "e46a4211-de23-45ab-b51a-15cff32cafbd",
-              "parentUUID": "112221b3-f172-46ed-97fa-45ca0f399de9",
+              "uuid": "abdf1392-b406-4da0-b8fa-3e6a3ce9647e",
+              "parentUUID": "4b9a42db-a2b4-4064-9b9b-0bb13f164e15",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Fail to login with invalid email and valid password -> TC#: PFS-7",
               "fullTitle": "Negative: Fail to login: PFS-2, PFS-3, PFS-4, PFS-5, PFS-6, PFS-7 Fail to login with invalid email and valid password -> TC#: PFS-7",
               "timedOut": null,
-              "duration": 6847,
+              "duration": 7618,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "loginPage.navigateToSignIn();\nloginPage.clickSignInBlue();\nloginPage.enterUserName('alex.gmobile.test');\nloginPage.clickPasswordField();\ncy.get(loc.email_error).contains('Enter a valid email.').should('exist');\nloginPage.clearUserNameField();\nloginPage.clearPasswordField();\ncy.get(loc.email_error).contains('Please enter your email address.').should('exist');",
               "err": {},
-              "uuid": "6a9cddfd-44b2-4a57-a8fe-8e8ce3afc8ee",
-              "parentUUID": "112221b3-f172-46ed-97fa-45ca0f399de9",
+              "uuid": "eb4d9d7b-bb13-4c5d-9a3e-1fbcad2d2e12",
+              "parentUUID": "4b9a42db-a2b4-4064-9b9b-0bb13f164e15",
               "isHook": false,
               "skipped": false
             },
@@ -74,17 +74,17 @@
               "title": "Fail to login with empty password && Fail to login with invalid password: -> TC#: PFS-4, PFS-5",
               "fullTitle": "Negative: Fail to login: PFS-2, PFS-3, PFS-4, PFS-5, PFS-6, PFS-7 Fail to login with empty password && Fail to login with invalid password: -> TC#: PFS-4, PFS-5",
               "timedOut": null,
-              "duration": 8568,
+              "duration": 10564,
               "state": "passed",
-              "speed": "medium",
+              "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "loginPage.navigateToSignIn();\nloginPage.clickSignInBlue();\nloginPage.enterUserName('alex.gmobile.test@gmail.com');\nloginPage.clickPasswordField();\nloginPage.clickUserNameField();\ncy.get(loc.password_error).contains('Please enter your password.').should('exist');\nloginPage.enterPassword('Testtest');\nloginPage.clickSignInButton();\ncy.get('h3').contains(\"Email and password don't match. Please try again.\").should('exist');",
               "err": {},
-              "uuid": "cc5f9676-b2dc-4f3e-8d07-c407092df554",
-              "parentUUID": "112221b3-f172-46ed-97fa-45ca0f399de9",
+              "uuid": "9bf4c4c6-5b4a-43d1-8e96-9b2254fc25b8",
+              "parentUUID": "4b9a42db-a2b4-4064-9b9b-0bb13f164e15",
               "isHook": false,
               "skipped": false
             },
@@ -92,7 +92,7 @@
               "title": "Fail to login with empty credentials -> TC#: PFS-6",
               "fullTitle": "Negative: Fail to login: PFS-2, PFS-3, PFS-4, PFS-5, PFS-6, PFS-7 Fail to login with empty credentials -> TC#: PFS-6",
               "timedOut": null,
-              "duration": 5543,
+              "duration": 7622,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -101,23 +101,23 @@
               "context": null,
               "code": "loginPage.navigateToSignIn();\nloginPage.clickSignInBlue();\nloginPage.clickUserNameField();\nloginPage.clickPasswordField();\ncy.get(loc.final_signin_button).should('be.disabled');",
               "err": {},
-              "uuid": "5617e849-a339-4e29-8ab0-7e40214c0a08",
-              "parentUUID": "112221b3-f172-46ed-97fa-45ca0f399de9",
+              "uuid": "c02082ca-d93c-4a4a-9fc8-1767f1c60b80",
+              "parentUUID": "4b9a42db-a2b4-4064-9b9b-0bb13f164e15",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "e46a4211-de23-45ab-b51a-15cff32cafbd",
-            "6a9cddfd-44b2-4a57-a8fe-8e8ce3afc8ee",
-            "cc5f9676-b2dc-4f3e-8d07-c407092df554",
-            "5617e849-a339-4e29-8ab0-7e40214c0a08"
+            "abdf1392-b406-4da0-b8fa-3e6a3ce9647e",
+            "eb4d9d7b-bb13-4c5d-9a3e-1fbcad2d2e12",
+            "9bf4c4c6-5b4a-43d1-8e96-9b2254fc25b8",
+            "c02082ca-d93c-4a4a-9fc8-1767f1c60b80"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 28839,
+          "duration": 32884,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -133,7 +133,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "e1c85d61-fb08-4afd-ad22-2a2ed04cf6a5",
+      "uuid": "72ff7170-0dc0-4099-978a-27c3a2f25b65",
       "title": "",
       "fullFile": "cypress/e2e/login_positive.cy.js",
       "file": "cypress/e2e/login_positive.cy.js",
@@ -142,7 +142,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "833bfcbf-d6f5-457d-9447-b3dc72ae27f6",
+          "uuid": "4cc4ba43-b1a4-4041-90f7-611d5985094c",
           "title": "Positive: Successful login & logout tests",
           "fullFile": "",
           "file": "",
@@ -153,7 +153,7 @@
               "title": "Successful login & Successful logout TC#: PFS-1, PFS-8",
               "fullTitle": "Positive: Successful login & logout tests Successful login & Successful logout TC#: PFS-1, PFS-8",
               "timedOut": null,
-              "duration": 16449,
+              "duration": 18193,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -162,20 +162,20 @@
               "context": null,
               "code": "//Login PFS-1\nloginPage.navigateURL('https://www.hotels.com/');\nloginPage.navigateToSignIn();\nloginPage.clickSignInBlue();\nloginPage.enterUserName(globalEmail);\nloginPage.enterPassword(globalPassword);\nloginPage.clickSignInButton();\n//Login verification\ncy.get(loc.navigateTosignIn).contains('button', 'Alexey').should('exist');\n//Logout PFS-8\nloginPage.clickLogedInUserName();\nloginPage.clickSignOutButton();\n//Logout verification\ncy.get(loc.navigateTosignIn).contains('button', 'Sign in').should('exist');",
               "err": {},
-              "uuid": "de7d4f28-7d7f-4009-b1f7-d6d76ccd6b02",
-              "parentUUID": "833bfcbf-d6f5-457d-9447-b3dc72ae27f6",
+              "uuid": "894dc287-c50e-4a1c-a7f7-1ca9cffccbb3",
+              "parentUUID": "4cc4ba43-b1a4-4041-90f7-611d5985094c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "de7d4f28-7d7f-4009-b1f7-d6d76ccd6b02"
+            "894dc287-c50e-4a1c-a7f7-1ca9cffccbb3"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 16449,
+          "duration": 18193,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

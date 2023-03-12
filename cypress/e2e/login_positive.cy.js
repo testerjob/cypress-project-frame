@@ -1,4 +1,3 @@
-/// <reference types="cypress" />
 import {LoginPage} from "../pages/login_page.cy"
 import {Locators} from "../locators/locators.cy"
 
