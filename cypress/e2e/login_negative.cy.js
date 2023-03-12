@@ -49,7 +49,7 @@ describe('Negative: Fail to login: PFS-2, PFS-3, PFS-4, PFS-5, PFS-6, PFS-7', ()
         cy.get('h3').contains("Email and password don't match. Please try again.").should('exist')
     })
     
-    it('Fail to login with empty credantials -> TC#: PFS-6', () => {
+    it('Fail to login with empty credentials -> TC#: PFS-6', () => {
 
         loginPage.navigateToSignIn()
         loginPage.clickSignInBlue()
