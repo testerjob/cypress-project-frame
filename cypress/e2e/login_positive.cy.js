@@ -26,6 +26,5 @@ describe('Positive: Successful login & logout tests', () => {
         loginPage.clickSignOutButton()
         //Logout verification
         cy.get(loc.navigateTosignIn).contains('button', 'Sign in').should('exist')
-
     })
 })

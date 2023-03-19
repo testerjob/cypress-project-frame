@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-03-12T20:42:35.903Z",
-    "end": "2023-03-12T20:42:56.155Z",
-    "duration": 20252,
+    "start": "2023-03-19T21:23:45.292Z",
+    "end": "2023-03-19T21:23:59.255Z",
+    "duration": 13963,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "72ff7170-0dc0-4099-978a-27c3a2f25b65",
+      "uuid": "2a54bf41-f790-48d6-8a0f-e53f3e837abc",
       "title": "",
       "fullFile": "cypress/e2e/login_positive.cy.js",
       "file": "cypress/e2e/login_positive.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4cc4ba43-b1a4-4041-90f7-611d5985094c",
+          "uuid": "e8ef5d5d-5e10-470c-92fe-6e937fbf112a",
           "title": "Positive: Successful login & logout tests",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Successful login & Successful logout TC#: PFS-1, PFS-8",
               "fullTitle": "Positive: Successful login & logout tests Successful login & Successful logout TC#: PFS-1, PFS-8",
               "timedOut": null,
-              "duration": 18193,
+              "duration": 12308,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "//Login PFS-1\nloginPage.navigateURL('https://www.hotels.com/');\nloginPage.navigateToSignIn();\nloginPage.clickSignInBlue();\nloginPage.enterUserName(globalEmail);\nloginPage.enterPassword(globalPassword);\nloginPage.clickSignInButton();\n//Login verification\ncy.get(loc.navigateTosignIn).contains('button', 'Alexey').should('exist');\n//Logout PFS-8\nloginPage.clickLogedInUserName();\nloginPage.clickSignOutButton();\n//Logout verification\ncy.get(loc.navigateTosignIn).contains('button', 'Sign in').should('exist');",
               "err": {},
-              "uuid": "894dc287-c50e-4a1c-a7f7-1ca9cffccbb3",
-              "parentUUID": "4cc4ba43-b1a4-4041-90f7-611d5985094c",
+              "uuid": "e434f4b8-9706-443c-b78d-37e4748cbc48",
+              "parentUUID": "e8ef5d5d-5e10-470c-92fe-6e937fbf112a",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "894dc287-c50e-4a1c-a7f7-1ca9cffccbb3"
+            "e434f4b8-9706-443c-b78d-37e4748cbc48"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 18193,
+          "duration": 12308,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
