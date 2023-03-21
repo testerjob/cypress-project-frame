@@ -24,8 +24,12 @@ export class Locators{
 
     //Search result page
     sort_by_dropdow = '#sort-filter-dropdown-sort'
+    search_by_property_field = '[aria-label="e.g. Marriott"]' 
+    opened_property_search_field ='[placeholder="e.g. Marriott"]'
     
-                       
+
+
+    
 
     
 

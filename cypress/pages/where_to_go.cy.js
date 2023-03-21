@@ -30,7 +30,14 @@ export class WhereToGo{
     clickSortByDropdownValue(){
         cy.get(loc.sort_by_dropdow).select('Price').should('have.value', 'PRICE_LOW_TO_HIGH')
     }
-    
+    clickSearchByPropertyField(){
+        cy.get(loc.search_by_property_field).click
+    }
+    typeIntoSearchByProperty(){
+        cy.get(loc.search_by_property_field).type(search_by)
+    }
+
+
 }
 
     
