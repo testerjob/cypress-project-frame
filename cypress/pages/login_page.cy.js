@@ -43,6 +43,18 @@ export class LoginPage{
     clickSignOutButton(){
         cy.get('a').contains('Sign out').click()
     }
+    verifyLogin(){
+        cy.get(loc.navigateTosignIn).contains('button', name).should('exist')
+    }
+    verifyLogOut(){
+        cy.get(loc.navigateTosignIn).contains('button', 'Sign in').should('exist')
+    }
+    errorNoDomain(){
+        cy.get(loc.email_error).contains('Enter a valid email.').should('exist')
+    }
+    errorEmptyEmail(){
+        cy.get(loc.email_error).contains('Please enter your email address.').should('exist')
+    }
 
 }
 

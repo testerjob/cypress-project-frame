@@ -1,4 +1,3 @@
-/// <reference types="cypress" />
 import {LoginPage} from "../pages/login_page.cy"
 import {Locators} from "../locators/locators.cy"
 
@@ -27,6 +26,5 @@ describe('Positive: Successful login & logout tests', () => {
         loginPage.clickSignOutButton()
         //Logout verification
         cy.get(loc.navigateTosignIn).contains('button', 'Sign in').should('exist')
-
     })
 })

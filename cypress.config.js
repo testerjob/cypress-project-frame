@@ -3,8 +3,8 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   e2e: {
     watchForFileChanges: true,
-    
     reporter: "mochawesome",
+    projectId: "i3ct1d",
     reporterOptions : {
       charts: true,
       overwrite: false,
@@ -17,6 +17,7 @@ module.exports = defineConfig({
     defaultCommandTimeout: 10000,
     setupNodeEvents(on, config) {
     },
+    
   },
 })
   

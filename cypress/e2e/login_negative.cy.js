@@ -18,9 +18,11 @@ describe('Negative: Fail to login: PFS-2, PFS-3, PFS-4, PFS-5, PFS-6, PFS-7', ()
         loginPage.clickSignInBlue()
         loginPage.enterUserName('alex.gmobile.test')
         loginPage.clickPasswordField()
+        //verification 1
         cy.get(loc.email_error).contains('Enter a valid email.').should('exist')
         loginPage.clearUserNameField()
         loginPage.clearPasswordField()
+        //verification 2
         cy.get(loc.email_error).contains('Please enter your email address.').should('exist')
     })
 
