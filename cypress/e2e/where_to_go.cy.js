@@ -54,7 +54,8 @@ describe('Search field - Where to go (not logged user): PFS-11,PFS-12', () => {
         //Empty search field error messaeges PFS-10
         whereToGo.clickSearchButton()
         cy.get(loc.search_error).contains('Please select a destination').should('exist')
-        cy.get('#lodging-search-form-1').contains('h3', 'To continue, please correct the error.').should('exist')
+        cy.get('#lodging-search-form-1').contains('h3', 'Please correct the error to continue').should('exist')
+        cy.end()
 
     }) 
 })
