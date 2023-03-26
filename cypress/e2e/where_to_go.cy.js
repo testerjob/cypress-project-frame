@@ -21,6 +21,7 @@ describe('Search field - Where to go (not logged user): PFS-11,PFS-12', () => {
         cy.wait(500)
         whereToGo.typeDestinationToSearch(text)
         whereToGo.clickSearchButton()
+        //cy.get('button').click().should('have.class', 'active')
         cy.get('h3').contains('Search by property name').should('exist')
 
         //Popular filters - Pool check

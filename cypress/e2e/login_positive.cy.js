@@ -17,6 +17,7 @@ describe('Positive: Successful login & logout tests', () => {
         loginPage.clickSignInBlue()
         loginPage.enterUserName(globalEmail)
         loginPage.enterPassword(globalPassword)
+        cy.wait(2000)
         loginPage.clickSignInButton()
         //Login verification
         cy.get(loc.navigateTosignIn).contains('button', 'Alexey').should('exist')
@@ -26,5 +27,6 @@ describe('Positive: Successful login & logout tests', () => {
         loginPage.clickSignOutButton()
         //Logout verification
         cy.get(loc.navigateTosignIn).contains('button', 'Sign in').should('exist')
+        cy.end()
     })
 })
