@@ -5,9 +5,9 @@
     "passes": 8,
     "pending": 0,
     "failures": 0,
-    "start": "2023-03-23T07:14:59.617Z",
-    "end": "2023-03-23T07:16:24.935Z",
-    "duration": 64083,
+    "start": "2023-03-26T05:45:38.510Z",
+    "end": "2023-03-26T05:47:12.816Z",
+    "duration": 73331,
     "testsRegistered": 8,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "c2c81299-66ff-453e-b1c2-656d5479eedb",
+      "uuid": "752809da-66e3-4b38-84c7-a4a74c30df44",
       "title": "",
       "fullFile": "cypress/e2e/login_negative.cy.js",
       "file": "cypress/e2e/login_negative.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4b7dd27f-27ff-4d27-9112-a9076d0e8679",
+          "uuid": "d81294d3-ecc3-48cd-8f52-2082ee20d25d",
           "title": "Negative: Fail to login: PFS-2, PFS-3, PFS-4, PFS-5, PFS-6, PFS-7",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Fail to login without domain && Fail to login with empty email ->TC#: PFS-2, PFS-3",
               "fullTitle": "Negative: Fail to login: PFS-2, PFS-3, PFS-4, PFS-5, PFS-6, PFS-7 Fail to login without domain && Fail to login with empty email ->TC#: PFS-2, PFS-3",
               "timedOut": null,
-              "duration": 5079,
+              "duration": 6536,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "loginPage.navigateToSignIn();\nloginPage.clickSignInBlue();\nloginPage.enterUserName('alex.gmobile.test');\nloginPage.clickPasswordField();\n//verification 1\ncy.get(loc.email_error).contains('Enter a valid email.').should('exist');\nloginPage.clearUserNameField();\nloginPage.clearPasswordField();\n//verification 2\ncy.get(loc.email_error).contains('Please enter your email address.').should('exist');",
               "err": {},
-              "uuid": "8ecffccc-5e7e-4486-837c-7db0c1991120",
-              "parentUUID": "4b7dd27f-27ff-4d27-9112-a9076d0e8679",
+              "uuid": "0affac6b-8ed5-49e3-a84d-b3f1ca96f6ec",
+              "parentUUID": "d81294d3-ecc3-48cd-8f52-2082ee20d25d",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Fail to login with invalid email and valid password -> TC#: PFS-7",
               "fullTitle": "Negative: Fail to login: PFS-2, PFS-3, PFS-4, PFS-5, PFS-6, PFS-7 Fail to login with invalid email and valid password -> TC#: PFS-7",
               "timedOut": null,
-              "duration": 5013,
+              "duration": 6149,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "loginPage.navigateToSignIn();\nloginPage.clickSignInBlue();\nloginPage.enterUserName('alex.gmobile.test');\nloginPage.clickPasswordField();\ncy.get(loc.email_error).contains('Enter a valid email.').should('exist');\nloginPage.clearUserNameField();\nloginPage.clearPasswordField();\ncy.get(loc.email_error).contains('Please enter your email address.').should('exist');",
               "err": {},
-              "uuid": "6c157e4a-1a86-40e0-8fc8-01372e8f07a4",
-              "parentUUID": "4b7dd27f-27ff-4d27-9112-a9076d0e8679",
+              "uuid": "e0d7e36f-4cc4-4a59-a7df-ef74ba63d32b",
+              "parentUUID": "d81294d3-ecc3-48cd-8f52-2082ee20d25d",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Fail to login with empty password && Fail to login with invalid password: -> TC#: PFS-4, PFS-5",
               "fullTitle": "Negative: Fail to login: PFS-2, PFS-3, PFS-4, PFS-5, PFS-6, PFS-7 Fail to login with empty password && Fail to login with invalid password: -> TC#: PFS-4, PFS-5",
               "timedOut": null,
-              "duration": 7568,
+              "duration": 8376,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -83,8 +83,8 @@
               "context": null,
               "code": "loginPage.navigateToSignIn();\nloginPage.clickSignInBlue();\nloginPage.enterUserName('alex.gmobile.test@gmail.com');\nloginPage.clickPasswordField();\nloginPage.clickUserNameField();\ncy.get(loc.password_error).contains('Please enter your password.').should('exist');\nloginPage.enterPassword('Testtest');\nloginPage.clickSignInButton();\ncy.get('h3').contains(\"Email and password don't match. Please try again.\").should('exist');",
               "err": {},
-              "uuid": "e7eea0d3-32e8-4b61-933f-097ea4209aea",
-              "parentUUID": "4b7dd27f-27ff-4d27-9112-a9076d0e8679",
+              "uuid": "ccfb9719-7320-46d9-bcd6-1931d806166b",
+              "parentUUID": "d81294d3-ecc3-48cd-8f52-2082ee20d25d",
               "isHook": false,
               "skipped": false
             },
@@ -92,7 +92,7 @@
               "title": "Fail to login with empty credentials -> TC#: PFS-6",
               "fullTitle": "Negative: Fail to login: PFS-2, PFS-3, PFS-4, PFS-5, PFS-6, PFS-7 Fail to login with empty credentials -> TC#: PFS-6",
               "timedOut": null,
-              "duration": 3699,
+              "duration": 4557,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -101,23 +101,23 @@
               "context": null,
               "code": "loginPage.navigateToSignIn();\nloginPage.clickSignInBlue();\nloginPage.clickUserNameField();\nloginPage.clickPasswordField();\ncy.get(loc.final_signin_button).should('be.disabled');",
               "err": {},
-              "uuid": "f349b476-0515-4c77-96d9-4d840a31ec12",
-              "parentUUID": "4b7dd27f-27ff-4d27-9112-a9076d0e8679",
+              "uuid": "62a38341-3907-4436-bbb1-2b064f47fc7b",
+              "parentUUID": "d81294d3-ecc3-48cd-8f52-2082ee20d25d",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "8ecffccc-5e7e-4486-837c-7db0c1991120",
-            "6c157e4a-1a86-40e0-8fc8-01372e8f07a4",
-            "e7eea0d3-32e8-4b61-933f-097ea4209aea",
-            "f349b476-0515-4c77-96d9-4d840a31ec12"
+            "0affac6b-8ed5-49e3-a84d-b3f1ca96f6ec",
+            "e0d7e36f-4cc4-4a59-a7df-ef74ba63d32b",
+            "ccfb9719-7320-46d9-bcd6-1931d806166b",
+            "62a38341-3907-4436-bbb1-2b064f47fc7b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 21359,
+          "duration": 25618,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -133,7 +133,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "9e4bd8f2-9769-48a2-a392-b1045e2090be",
+      "uuid": "b949019a-6b44-4475-83b3-63edc5d094f4",
       "title": "",
       "fullFile": "cypress/e2e/login_positive.cy.js",
       "file": "cypress/e2e/login_positive.cy.js",
@@ -142,7 +142,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "1c98379b-c227-4b43-a11c-1c58f05a5ab7",
+          "uuid": "915ea478-995a-4768-bf5a-85cca1f4c298",
           "title": "Positive: Successful login & logout tests",
           "fullFile": "",
           "file": "",
@@ -153,29 +153,29 @@
               "title": "Successful login & Successful logout TC#: PFS-1, PFS-8",
               "fullTitle": "Positive: Successful login & logout tests Successful login & Successful logout TC#: PFS-1, PFS-8",
               "timedOut": null,
-              "duration": 13216,
+              "duration": 14615,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "//Login PFS-1\nloginPage.navigateURL('https://www.hotels.com/');\nloginPage.navigateToSignIn();\nloginPage.clickSignInBlue();\nloginPage.enterUserName(globalEmail);\nloginPage.enterPassword(globalPassword);\nloginPage.clickSignInButton();\n//Login verification\ncy.get(loc.navigateTosignIn).contains('button', 'Alexey').should('exist');\n//Logout PFS-8\nloginPage.clickLogedInUserName();\nloginPage.clickSignOutButton();\n//Logout verification\ncy.get(loc.navigateTosignIn).contains('button', 'Sign in').should('exist');",
+              "code": "//Login PFS-1\nloginPage.navigateURL('https://www.hotels.com/');\nloginPage.navigateToSignIn();\nloginPage.clickSignInBlue();\nloginPage.enterUserName(globalEmail);\nloginPage.enterPassword(globalPassword);\nloginPage.clickSignInButton();\n//Login verification\ncy.get(loc.navigateTosignIn, {\n  timeout: 10000\n}).contains('button', 'Alexey').should('exist');\n//Logout PFS-8\nloginPage.clickLogedInUserName();\nloginPage.clickSignOutButton();\n//Logout verification\ncy.get(loc.navigateTosignIn, {\n  timeout: 10000\n}).contains('button', 'Sign in').should('exist');\ncy.end();",
               "err": {},
-              "uuid": "995a86f3-cd68-4e7c-b4ef-5d5029385588",
-              "parentUUID": "1c98379b-c227-4b43-a11c-1c58f05a5ab7",
+              "uuid": "7a853f74-9e3d-47ff-b84d-40b3d1274553",
+              "parentUUID": "915ea478-995a-4768-bf5a-85cca1f4c298",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "995a86f3-cd68-4e7c-b4ef-5d5029385588"
+            "7a853f74-9e3d-47ff-b84d-40b3d1274553"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 13216,
+          "duration": 14615,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -191,7 +191,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "e142b698-1a1c-4809-aaa5-eed8e984f681",
+      "uuid": "a170825c-70e9-451a-80c0-b5352e42122f",
       "title": "",
       "fullFile": "cypress/e2e/search_by_property.cy.js",
       "file": "cypress/e2e/search_by_property.cy.js",
@@ -200,7 +200,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "2fbd6dd3-d89c-49f3-a2fb-5b3249116b9d",
+          "uuid": "8f70d978-16f1-4fae-95c0-443babd1e226",
           "title": "Search field - Where to go (not logged user): PFS-11,PFS-13",
           "fullFile": "",
           "file": "",
@@ -211,29 +211,29 @@
               "title": "Search field Where to go and search by property",
               "fullTitle": "Search field - Where to go (not logged user): PFS-11,PFS-13 Search field Where to go and search by property",
               "timedOut": null,
-              "duration": 10617,
+              "duration": 12733,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "//Positive search PFS-11\nwhereToGo.clickSearchField();\ncy.wait(500);\ncy.get(loc.search_field).type(text).type('{enter}');\nwhereToGo.clickSearchButton();\ncy.get('h3').contains('Search by property name').should('exist');\n//Search by property name PFS-13\ncy.get(loc.search_by_property_field, {\n  timeout: 10000\n}).click();\ncy.wait(500);\ncy.get(loc.opened_property_search_field).type(hotel, {\n  force: true\n}).type('{enter}').should('have.value', hotel);\ncy.get('[data-stid=\"results-header\"]').contains('Marriot').click();",
+              "code": "//Positive search PFS-11\nwhereToGo.clickSearchField();\ncy.wait(500);\ncy.get(loc.search_field).type(text).type('{enter}');\nwhereToGo.clickSearchButton();\ncy.get('.uitk-heading-5', {\n  timeout: 10000\n}).contains('h3', 'Search by property name').should('exist');\n//Search by property name PFS-13\ncy.get(loc.search_by_property_field, {\n  timeout: 10000\n}).click();\ncy.wait(500);\ncy.get(loc.opened_property_search_field).type(hotel, {\n  force: true\n}).type('{enter}').should('have.value', hotel);\ncy.get('#playback-filter-pill-hotelName-Marriot').contains('Marriot').should('exist');\ncy.end();",
               "err": {},
-              "uuid": "66e13372-b9b6-4ddc-b587-d5c406838d95",
-              "parentUUID": "2fbd6dd3-d89c-49f3-a2fb-5b3249116b9d",
+              "uuid": "82f46ff0-6096-470f-8aab-97eac13efafa",
+              "parentUUID": "8f70d978-16f1-4fae-95c0-443babd1e226",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "66e13372-b9b6-4ddc-b587-d5c406838d95"
+            "82f46ff0-6096-470f-8aab-97eac13efafa"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 10617,
+          "duration": 12733,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -249,7 +249,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "0363a1c1-511c-4e57-8079-e44d889f35d3",
+      "uuid": "7ad12149-9b53-458e-bb85-997a7fad9fa2",
       "title": "",
       "fullFile": "cypress/e2e/where_to_go.cy.js",
       "file": "cypress/e2e/where_to_go.cy.js",
@@ -258,7 +258,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "58c907d6-a71e-4d29-a823-960c882ee12d",
+          "uuid": "de0fe10e-fcf3-45f7-ac95-7c46ad6e6bb5",
           "title": "Search field - Where to go (not logged user): PFS-11,PFS-12",
           "fullFile": "",
           "file": "",
@@ -269,17 +269,17 @@
               "title": "Search field Where to go",
               "fullTitle": "Search field - Where to go (not logged user): PFS-11,PFS-12 Search field Where to go",
               "timedOut": null,
-              "duration": 13074,
+              "duration": 17981,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "//Correct search PFS-11\nwhereToGo.clickSearchField();\ncy.wait(500);\nwhereToGo.typeDestinationToSearch(text);\nwhereToGo.clickSearchButton();\ncy.get('h3').contains('Search by property name').should('exist');\n//Popular filters - Pool check\nwhereToGo.clickFilterWithPool();\ncy.get(loc.filter_pool).should('be.checked');\n//Star rating check\nwhereToGo.clickStarRaiting();\ncy.get(loc.star_raiting_value4).should('be.checked');\n//Guest raiting check\nwhereToGo.clickGuestRaiting();\ncy.get('input[type=\"radio\"][aria-label=\"Good 7+\"][value=\"35\"]').click();\n//Uncheck pool\nwhereToGo.removePoolButton();\ncy.get(loc.filter_pool).should('not.be.checked');\n//Uncheck star rating\nwhereToGo.uncheckStarRaiting();\ncy.get(loc.star_raiting_value4).should('not.be.checked');\n//Guest raiting\ncy.get(loc.remove_guest_button).click();\ncy.get(loc.remove_guest_button).should('not.exist');",
+              "code": "//Correct search PFS-11\nwhereToGo.clickSearchField();\ncy.wait(500);\nwhereToGo.typeDestinationToSearch(text);\nwhereToGo.clickSearchButton();\n//cy.get('button').click().should('have.class', 'active')\ncy.get('h3').contains('Search by property name').should('exist');\n//Popular filters - Pool check\nwhereToGo.clickFilterWithPool();\ncy.get(loc.filter_pool).should('be.checked');\n//Star rating check\nwhereToGo.clickStarRaiting();\ncy.get(loc.star_raiting_value4).should('be.checked');\n//Guest raiting check\nwhereToGo.clickGuestRaiting();\ncy.get('input[type=\"radio\"][aria-label=\"Good 7+\"][value=\"35\"]').click();\n//Uncheck pool\nwhereToGo.removePoolButton();\ncy.get(loc.filter_pool).should('not.be.checked');\n//Uncheck star rating\nwhereToGo.uncheckStarRaiting();\ncy.get(loc.star_raiting_value4).should('not.be.checked');\n//Guest raiting\ncy.get(loc.remove_guest_button).click();\ncy.get(loc.remove_guest_button).should('not.exist');",
               "err": {},
-              "uuid": "478eb5d0-b3db-4755-af08-f79ff7775a98",
-              "parentUUID": "58c907d6-a71e-4d29-a823-960c882ee12d",
+              "uuid": "91762b41-8a63-4c54-8add-a4d6836ac749",
+              "parentUUID": "de0fe10e-fcf3-45f7-ac95-7c46ad6e6bb5",
               "isHook": false,
               "skipped": false
             },
@@ -287,30 +287,30 @@
               "title": "Error handling for the search filed -> TC#: PFS-9, PFS-10",
               "fullTitle": "Search field - Where to go (not logged user): PFS-11,PFS-12 Error handling for the search filed -> TC#: PFS-9, PFS-10",
               "timedOut": null,
-              "duration": 5817,
+              "duration": 2384,
               "state": "passed",
-              "speed": "medium",
+              "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "//Empty search state message PFS-9\nwhereToGo.clickSearchField();\ncy.get('.uitk-text-default-theme').contains('Search by destination, accommodations, or landmark').should('exist');\nwhereToGo.clickSearchField();\n//Empty search field error messaeges PFS-10\nwhereToGo.clickSearchButton();\ncy.get(loc.search_error).contains('Please select a destination').should('exist');\ncy.get('#lodging-search-form-1').contains('h3', 'To continue, please correct the error.').should('exist');",
+              "code": "//Empty search state message PFS-9\nwhereToGo.clickSearchField();\ncy.get('.uitk-text-default-theme').contains('Search by destination, accommodations, or landmark').should('exist');\nwhereToGo.clickSearchField();\n//Empty search field error messaeges PFS-10\nwhereToGo.clickSearchButton();\ncy.get(loc.search_error).contains('Please select a destination').should('exist');\ncy.get('#lodging-search-form-1').contains('h3', 'Please correct the error to continue').should('exist');\ncy.end();",
               "err": {},
-              "uuid": "30cef297-2b47-45ec-871d-89607e75b5b4",
-              "parentUUID": "58c907d6-a71e-4d29-a823-960c882ee12d",
+              "uuid": "80a05055-12a8-4f01-9578-7840dee163ae",
+              "parentUUID": "de0fe10e-fcf3-45f7-ac95-7c46ad6e6bb5",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "478eb5d0-b3db-4755-af08-f79ff7775a98",
-            "30cef297-2b47-45ec-871d-89607e75b5b4"
+            "91762b41-8a63-4c54-8add-a4d6836ac749",
+            "80a05055-12a8-4f01-9578-7840dee163ae"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 18891,
+          "duration": 20365,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

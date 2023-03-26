@@ -17,17 +17,15 @@ describe('Positive: Successful login & logout tests', () => {
         loginPage.clickSignInBlue()
         loginPage.enterUserName(globalEmail)
         loginPage.enterPassword(globalPassword)
-        cy.wait(2000)
         loginPage.clickSignInButton()
         //Login verification
-        cy.wait(2000)
-        cy.get(loc.navigateTosignIn).contains('button', 'Alexey').should('exist')
+        cy.get(loc.navigateTosignIn, {timeout:10000}).contains('button', 'Alexey').should('exist')
 
         //Logout PFS-8
         loginPage.clickLogedInUserName()
         loginPage.clickSignOutButton()
         //Logout verification
-        cy.get(loc.navigateTosignIn).contains('button', 'Sign in').should('exist')
+        cy.get(loc.navigateTosignIn, {timeout:10000}).contains('button', 'Sign in').should('exist')
         cy.end()
     })
 })

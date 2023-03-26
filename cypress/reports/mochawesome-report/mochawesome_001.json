@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-03-23T07:15:28.304Z",
-    "end": "2023-03-23T07:15:42.972Z",
-    "duration": 14668,
+    "start": "2023-03-26T05:46:11.805Z",
+    "end": "2023-03-26T05:46:28.069Z",
+    "duration": 16264,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "9e4bd8f2-9769-48a2-a392-b1045e2090be",
+      "uuid": "b949019a-6b44-4475-83b3-63edc5d094f4",
       "title": "",
       "fullFile": "cypress/e2e/login_positive.cy.js",
       "file": "cypress/e2e/login_positive.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "1c98379b-c227-4b43-a11c-1c58f05a5ab7",
+          "uuid": "915ea478-995a-4768-bf5a-85cca1f4c298",
           "title": "Positive: Successful login & logout tests",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Successful login & Successful logout TC#: PFS-1, PFS-8",
               "fullTitle": "Positive: Successful login & logout tests Successful login & Successful logout TC#: PFS-1, PFS-8",
               "timedOut": null,
-              "duration": 13216,
+              "duration": 14615,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "//Login PFS-1\nloginPage.navigateURL('https://www.hotels.com/');\nloginPage.navigateToSignIn();\nloginPage.clickSignInBlue();\nloginPage.enterUserName(globalEmail);\nloginPage.enterPassword(globalPassword);\nloginPage.clickSignInButton();\n//Login verification\ncy.get(loc.navigateTosignIn).contains('button', 'Alexey').should('exist');\n//Logout PFS-8\nloginPage.clickLogedInUserName();\nloginPage.clickSignOutButton();\n//Logout verification\ncy.get(loc.navigateTosignIn).contains('button', 'Sign in').should('exist');",
+              "code": "//Login PFS-1\nloginPage.navigateURL('https://www.hotels.com/');\nloginPage.navigateToSignIn();\nloginPage.clickSignInBlue();\nloginPage.enterUserName(globalEmail);\nloginPage.enterPassword(globalPassword);\nloginPage.clickSignInButton();\n//Login verification\ncy.get(loc.navigateTosignIn, {\n  timeout: 10000\n}).contains('button', 'Alexey').should('exist');\n//Logout PFS-8\nloginPage.clickLogedInUserName();\nloginPage.clickSignOutButton();\n//Logout verification\ncy.get(loc.navigateTosignIn, {\n  timeout: 10000\n}).contains('button', 'Sign in').should('exist');\ncy.end();",
               "err": {},
-              "uuid": "995a86f3-cd68-4e7c-b4ef-5d5029385588",
-              "parentUUID": "1c98379b-c227-4b43-a11c-1c58f05a5ab7",
+              "uuid": "7a853f74-9e3d-47ff-b84d-40b3d1274553",
+              "parentUUID": "915ea478-995a-4768-bf5a-85cca1f4c298",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "995a86f3-cd68-4e7c-b4ef-5d5029385588"
+            "7a853f74-9e3d-47ff-b84d-40b3d1274553"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 13216,
+          "duration": 14615,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

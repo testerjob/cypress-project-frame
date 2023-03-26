@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-03-23T07:15:47.149Z",
-    "end": "2023-03-23T07:16:00.199Z",
-    "duration": 13050,
+    "start": "2023-03-26T05:46:32.475Z",
+    "end": "2023-03-26T05:46:46.816Z",
+    "duration": 14341,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e142b698-1a1c-4809-aaa5-eed8e984f681",
+      "uuid": "a170825c-70e9-451a-80c0-b5352e42122f",
       "title": "",
       "fullFile": "cypress/e2e/search_by_property.cy.js",
       "file": "cypress/e2e/search_by_property.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "2fbd6dd3-d89c-49f3-a2fb-5b3249116b9d",
+          "uuid": "8f70d978-16f1-4fae-95c0-443babd1e226",
           "title": "Search field - Where to go (not logged user): PFS-11,PFS-13",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Search field Where to go and search by property",
               "fullTitle": "Search field - Where to go (not logged user): PFS-11,PFS-13 Search field Where to go and search by property",
               "timedOut": null,
-              "duration": 10617,
+              "duration": 12733,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "//Positive search PFS-11\nwhereToGo.clickSearchField();\ncy.wait(500);\ncy.get(loc.search_field).type(text).type('{enter}');\nwhereToGo.clickSearchButton();\ncy.get('h3').contains('Search by property name').should('exist');\n//Search by property name PFS-13\ncy.get(loc.search_by_property_field, {\n  timeout: 10000\n}).click();\ncy.wait(500);\ncy.get(loc.opened_property_search_field).type(hotel, {\n  force: true\n}).type('{enter}').should('have.value', hotel);\ncy.get('[data-stid=\"results-header\"]').contains('Marriot').click();",
+              "code": "//Positive search PFS-11\nwhereToGo.clickSearchField();\ncy.wait(500);\ncy.get(loc.search_field).type(text).type('{enter}');\nwhereToGo.clickSearchButton();\ncy.get('.uitk-heading-5', {\n  timeout: 10000\n}).contains('h3', 'Search by property name').should('exist');\n//Search by property name PFS-13\ncy.get(loc.search_by_property_field, {\n  timeout: 10000\n}).click();\ncy.wait(500);\ncy.get(loc.opened_property_search_field).type(hotel, {\n  force: true\n}).type('{enter}').should('have.value', hotel);\ncy.get('#playback-filter-pill-hotelName-Marriot').contains('Marriot').should('exist');\ncy.end();",
               "err": {},
-              "uuid": "66e13372-b9b6-4ddc-b587-d5c406838d95",
-              "parentUUID": "2fbd6dd3-d89c-49f3-a2fb-5b3249116b9d",
+              "uuid": "82f46ff0-6096-470f-8aab-97eac13efafa",
+              "parentUUID": "8f70d978-16f1-4fae-95c0-443babd1e226",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "66e13372-b9b6-4ddc-b587-d5c406838d95"
+            "82f46ff0-6096-470f-8aab-97eac13efafa"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 10617,
+          "duration": 12733,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

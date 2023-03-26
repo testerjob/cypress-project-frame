@@ -35,7 +35,7 @@ export class LoginPage{
         cy.get(loc.password_locator).clear()
     }
     clickSignInButton(){
-        cy.get(loc.final_signin_button).click({force: true})
+        cy.get(loc.final_signin_button, {timeout:10000}).click({force: true})
     }
     clickLogedInUserName(){
         cy.get(loc.navigateTosignIn).contains('button', name).click()
