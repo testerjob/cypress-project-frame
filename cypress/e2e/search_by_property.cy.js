@@ -31,7 +31,7 @@ describe('Search field - Where to go (not logged user): PFS-11,PFS-13', () => {
           .type(hotel, {force: true})
           .type('{enter}')
           .should('have.value', hotel)
-        cy.get('[data-stid="results-header"]').contains('Marriot').click()
+        cy.get('#playback-filter-pill-hotelName-Marriot').contains('Marriot').should('exist')
         cy.end()
 
     })

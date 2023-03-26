@@ -20,6 +20,7 @@ describe('Positive: Successful login & logout tests', () => {
         cy.wait(2000)
         loginPage.clickSignInButton()
         //Login verification
+        cy.wait(2000)
         cy.get(loc.navigateTosignIn).contains('button', 'Alexey').should('exist')
 
         //Logout PFS-8
