@@ -19,13 +19,30 @@ describe('Search field - Where to go (not logged user): PFS-11,PFS-12', () => {
         //Correct search PFS-11
         whereToGo.clickSearchField()
         cy.wait(500)
-        cy.get(loc.search_field).type(text).type('{enter}')
+        whereToGo.typeDestinationToSearch(text)
         whereToGo.clickSearchButton()
+        //cy.get('button').click().should('have.class', 'active')
         cy.get('h3').contains('Search by property name').should('exist')
 
-        //Sort by price dropdown PFS-12
-        whereToGo.clickSortByDropdownValue()
+        //Popular filters - Pool check
+        whereToGo.clickFilterWithPool()
+        cy.get(loc.filter_pool).should('be.checked')
+        //Star rating check
+        whereToGo.clickStarRaiting()
+        cy.get(loc.star_raiting_value4).should('be.checked')
+        //Guest raiting check
+        whereToGo.clickGuestRaiting()
+        cy.get('input[type="radio"][aria-label="Good 7+"][value="35"]').click()
 
+        //Uncheck pool
+        whereToGo.removePoolButton()
+        cy.get(loc.filter_pool).should('not.be.checked')
+        //Uncheck star rating
+        whereToGo.uncheckStarRaiting()
+        cy.get(loc.star_raiting_value4).should('not.be.checked')
+        //Guest raiting
+        cy.get(loc.remove_guest_button).click()
+        cy.get(loc.remove_guest_button).should('not.exist')
     })
 
     it('Error handling for the search filed -> TC#: PFS-9, PFS-10', () => {
@@ -38,6 +55,8 @@ describe('Search field - Where to go (not logged user): PFS-11,PFS-12', () => {
         //Empty search field error messaeges PFS-10
         whereToGo.clickSearchButton()
         cy.get(loc.search_error).contains('Please select a destination').should('exist')
-        cy.get('#lodging-search-form-1').contains('h3', 'To continue, please correct the error.').should('exist')
+        cy.get('#lodging-search-form-1').contains('h3', 'Please correct the error to continue').should('exist')
+        cy.end()
+
     }) 
 })

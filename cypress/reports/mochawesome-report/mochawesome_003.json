@@ -1,0 +1,127 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-03-27T20:33:18.714Z",
+    "end": "2023-03-27T20:33:42.939Z",
+    "duration": 24225,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ddbb67a9-3c2e-48de-9009-e00b8ddcdaa6",
+      "title": "",
+      "fullFile": "cypress/e2e/where_to_go.cy.js",
+      "file": "cypress/e2e/where_to_go.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0b1d313a-acf3-4d7d-b48b-2efe51e0276a",
+          "title": "Search field - Where to go (not logged user): PFS-11,PFS-12",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Search field Where to go",
+              "fullTitle": "Search field - Where to go (not logged user): PFS-11,PFS-12 Search field Where to go",
+              "timedOut": null,
+              "duration": 17388,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Correct search PFS-11\nwhereToGo.clickSearchField();\ncy.wait(500);\nwhereToGo.typeDestinationToSearch(text);\nwhereToGo.clickSearchButton();\n//cy.get('button').click().should('have.class', 'active')\ncy.get('h3').contains('Search by property name').should('exist');\n//Popular filters - Pool check\nwhereToGo.clickFilterWithPool();\ncy.get(loc.filter_pool).should('be.checked');\n//Star rating check\nwhereToGo.clickStarRaiting();\ncy.get(loc.star_raiting_value4).should('be.checked');\n//Guest raiting check\nwhereToGo.clickGuestRaiting();\ncy.get('input[type=\"radio\"][aria-label=\"Good 7+\"][value=\"35\"]').click();\n//Uncheck pool\nwhereToGo.removePoolButton();\ncy.get(loc.filter_pool).should('not.be.checked');\n//Uncheck star rating\nwhereToGo.uncheckStarRaiting();\ncy.get(loc.star_raiting_value4).should('not.be.checked');\n//Guest raiting\ncy.get(loc.remove_guest_button).click();\ncy.get(loc.remove_guest_button).should('not.exist');",
+              "err": {},
+              "uuid": "bf41a4fb-1593-4b3f-ad60-50eb5d870930",
+              "parentUUID": "0b1d313a-acf3-4d7d-b48b-2efe51e0276a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Error handling for the search filed -> TC#: PFS-9, PFS-10",
+              "fullTitle": "Search field - Where to go (not logged user): PFS-11,PFS-12 Error handling for the search filed -> TC#: PFS-9, PFS-10",
+              "timedOut": null,
+              "duration": 5395,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Empty search state message PFS-9\nwhereToGo.clickSearchField();\ncy.get('.uitk-text-default-theme').contains('Search by destination, accommodations, or landmark').should('exist');\nwhereToGo.clickSearchField();\n//Empty search field error messaeges PFS-10\nwhereToGo.clickSearchButton();\ncy.get(loc.search_error).contains('Please select a destination').should('exist');\ncy.get('#lodging-search-form-1').contains('h3', 'Please correct the error to continue').should('exist');\ncy.end();",
+              "err": {},
+              "uuid": "0057c6e9-cebb-4d7c-8409-28cd45c6bbb9",
+              "parentUUID": "0b1d313a-acf3-4d7d-b48b-2efe51e0276a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bf41a4fb-1593-4b3f-ad60-50eb5d870930",
+            "0057c6e9-cebb-4d7c-8409-28cd45c6bbb9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 22783,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/mochawesome-report",
+        "reportPageTitle": "Project Frame Report",
+        "embeddedScreenshots": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

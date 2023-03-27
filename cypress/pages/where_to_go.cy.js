@@ -36,6 +36,28 @@ export class WhereToGo{
     typeIntoSearchByProperty(){
         cy.get(loc.search_by_property_field).type(search_by)
     }
+    typeDestinationToSearch(text){
+        cy.get(loc.search_field).type(text).type('{enter}')
+    }
+    clickFilterWithPool(){
+        cy.get(loc.filter_pool).check({force: true})
+    }
+    clickStarRaiting(){
+        cy.get(loc.star_raiting_value4).check({force: true})
+    }
+    clickGuestRaiting(){
+        cy.get(loc.guest_raiting_7plus).click()
+    }
+    removePoolButton(){
+        cy.get(loc.remove_pool_button).contains('Pool').click()
+    }
+    uncheckStarRaiting(){
+        cy.get(loc.star_raiting_value4).uncheck({force: true})
+    }
+    removeGuestRaitingButton(){
+        cy.get('button[id="playback-filter-pill-guestRating-35"][aria-label="Remove Guest rating 7+"]').click()
+    }
+
 
 
 }

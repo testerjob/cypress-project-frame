@@ -1,0 +1,165 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-03-27T20:32:12.432Z",
+    "end": "2023-03-27T20:32:38.956Z",
+    "duration": 26524,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8c0d4537-5449-43df-a780-80c1c09e036c",
+      "title": "",
+      "fullFile": "cypress/e2e/login_negative.cy.js",
+      "file": "cypress/e2e/login_negative.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "07b8db8c-a864-4ca2-ae71-5d4651dc63c3",
+          "title": "Negative: Fail to login: PFS-2, PFS-3, PFS-4, PFS-5, PFS-6, PFS-7",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Fail to login without domain && Fail to login with empty email ->TC#: PFS-2, PFS-3",
+              "fullTitle": "Negative: Fail to login: PFS-2, PFS-3, PFS-4, PFS-5, PFS-6, PFS-7 Fail to login without domain && Fail to login with empty email ->TC#: PFS-2, PFS-3",
+              "timedOut": null,
+              "duration": 7036,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.navigateToSignIn();\nloginPage.clickSignInBlue();\nloginPage.enterUserName('alex.gmobile.test');\nloginPage.clickPasswordField();\n//verification 1\ncy.get(loc.email_error).contains('Enter a valid email.').should('exist');\nloginPage.clearUserNameField();\nloginPage.clearPasswordField();\n//verification 2\ncy.get(loc.email_error).contains('Please enter your email address.').should('exist');",
+              "err": {},
+              "uuid": "3413a396-7d3c-4102-94a0-d41bcff49254",
+              "parentUUID": "07b8db8c-a864-4ca2-ae71-5d4651dc63c3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Fail to login with invalid email and valid password -> TC#: PFS-7",
+              "fullTitle": "Negative: Fail to login: PFS-2, PFS-3, PFS-4, PFS-5, PFS-6, PFS-7 Fail to login with invalid email and valid password -> TC#: PFS-7",
+              "timedOut": null,
+              "duration": 5541,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.navigateToSignIn();\nloginPage.clickSignInBlue();\nloginPage.enterUserName('alex.gmobile.test');\nloginPage.clickPasswordField();\ncy.get(loc.email_error).contains('Enter a valid email.').should('exist');\nloginPage.clearUserNameField();\nloginPage.clearPasswordField();\ncy.get(loc.email_error).contains('Please enter your email address.').should('exist');",
+              "err": {},
+              "uuid": "4317b09a-d72b-40b3-9534-41476cafc987",
+              "parentUUID": "07b8db8c-a864-4ca2-ae71-5d4651dc63c3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Fail to login with empty password && Fail to login with invalid password: -> TC#: PFS-4, PFS-5",
+              "fullTitle": "Negative: Fail to login: PFS-2, PFS-3, PFS-4, PFS-5, PFS-6, PFS-7 Fail to login with empty password && Fail to login with invalid password: -> TC#: PFS-4, PFS-5",
+              "timedOut": null,
+              "duration": 7320,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.navigateToSignIn();\nloginPage.clickSignInBlue();\nloginPage.enterUserName('alex.gmobile.test@gmail.com');\nloginPage.clickPasswordField();\nloginPage.clickUserNameField();\ncy.get(loc.password_error).contains('Please enter your password.').should('exist');\nloginPage.enterPassword('Testtest');\nloginPage.clickSignInButton();\ncy.get('h3').contains(\"Email and password don't match. Please try again.\").should('exist');",
+              "err": {},
+              "uuid": "039b04d7-a3f1-4834-abbf-e77f863996cf",
+              "parentUUID": "07b8db8c-a864-4ca2-ae71-5d4651dc63c3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Fail to login with empty credentials -> TC#: PFS-6",
+              "fullTitle": "Negative: Fail to login: PFS-2, PFS-3, PFS-4, PFS-5, PFS-6, PFS-7 Fail to login with empty credentials -> TC#: PFS-6",
+              "timedOut": null,
+              "duration": 4354,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.navigateToSignIn();\nloginPage.clickSignInBlue();\nloginPage.clickUserNameField();\nloginPage.clickPasswordField();\ncy.get(loc.final_signin_button).should('be.disabled');",
+              "err": {},
+              "uuid": "f823b12f-613f-4875-9712-29293fdefd7f",
+              "parentUUID": "07b8db8c-a864-4ca2-ae71-5d4651dc63c3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3413a396-7d3c-4102-94a0-d41bcff49254",
+            "4317b09a-d72b-40b3-9534-41476cafc987",
+            "039b04d7-a3f1-4834-abbf-e77f863996cf",
+            "f823b12f-613f-4875-9712-29293fdefd7f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 24251,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/mochawesome-report",
+        "reportPageTitle": "Project Frame Report",
+        "embeddedScreenshots": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

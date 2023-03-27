@@ -26,7 +26,15 @@ export class Locators{
     sort_by_dropdow = '#sort-filter-dropdown-sort'
     search_by_property_field = '[aria-label="e.g. Marriott"]' 
     opened_property_search_field ='[placeholder="e.g. Marriott"]'
-    
+
+
+    //FILTER BY
+    price_per_night ='#price-primary'
+    filter_pool = 'input[type="checkbox"][value="POOL"]'
+    star_raiting_value4 = 'input[type="checkbox"][value="40"]'
+    guest_raiting_7plus = 'input[type="radio"][aria-label="Good 7+"]'
+    remove_pool_button = '#playback-filter-pill-amenities-POOL[aria-label="Remove Pool"]'
+    remove_guest_button = 'button[id="playback-filter-pill-guestRating-35"][aria-label="Remove Guest rating 7+"]'
 
 
     

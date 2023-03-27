@@ -5,6 +5,7 @@ module.exports = defineConfig({
     watchForFileChanges: true,
     reporter: "mochawesome",
     projectId: "i3ct1d",
+    video: false,
     reporterOptions : {
       charts: true,
       overwrite: false,

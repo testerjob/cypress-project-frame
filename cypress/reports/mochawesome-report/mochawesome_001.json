@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-03-27T20:32:40.607Z",
+    "end": "2023-03-27T20:32:58.213Z",
+    "duration": 17606,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "115f152c-0d39-4443-88f9-2a33680e1cfe",
+      "title": "",
+      "fullFile": "cypress/e2e/login_positive.cy.js",
+      "file": "cypress/e2e/login_positive.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "453a7cf2-df06-44e4-99a3-96b2188057e6",
+          "title": "Positive: Successful login & logout tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successful login & Successful logout TC#: PFS-1, PFS-8",
+              "fullTitle": "Positive: Successful login & logout tests Successful login & Successful logout TC#: PFS-1, PFS-8",
+              "timedOut": null,
+              "duration": 16037,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Screenshot\",\n        \"value\": \"/login_positive.cy.js/sign_in_button_check1.png\"\n      },\n      {\n        \"title\": \"Screenshot\",\n        \"value\": \"/login_positive.cy.js/sign_in_button_check2.png\"\n      }\n    ]\n  ]\n}",
+              "code": "//Login PFS-1\nloginPage.navigateURL('https://www.hotels.com/');\nloginPage.navigateToSignIn();\nloginPage.clickSignInBlue();\nloginPage.enterUserName(globalEmail);\nloginPage.enterPassword(globalPassword);\nloginPage.clickSignInButton();\n//Login verification\n//cy.get(loc.navigateTosignIn, {timeout:10000}).contains('button', 'Alexey').screenshot(\"sign_in_button_check1\")\n//cy.get(loc.navigateTosignIn, {timeout:10000}).contains('button', 'Alexey').should('exist').debug()\ncy.get('#secondaryNav').find('#gc-custom-header-nav-bar-acct-menu').contains('button', 'Alexey').screenshot(\"sign_in_button_check1\");\ncy.get('#secondaryNav').find('#gc-custom-header-nav-bar-acct-menu').contains('button', 'Alexey').should('exist').debug();\n//Logout PFS-8\nloginPage.clickLogedInUserName();\nloginPage.clickSignOutButton();\n//Logout verification\n//cy.get(loc.navigateTosignIn, {timeout:10000}).contains('button', 'Sign in').screenshot(\"sign_in_button_check2\")\n//cy.get(loc.navigateTosignIn, {timeout:10000}).contains('button', 'Sign in').should('exist').debug()\ncy.get('#secondaryNav').find('#gc-custom-header-nav-bar-acct-menu').contains('button', 'Sign in').screenshot(\"sign_in_button_check2\");\ncy.get('#secondaryNav').find('#gc-custom-header-nav-bar-acct-menu').contains('button', 'Sign in').should('exist').debug();\ncy.end();",
+              "err": {},
+              "uuid": "a22ab171-46f9-4a6f-9609-d2e389b493b9",
+              "parentUUID": "453a7cf2-df06-44e4-99a3-96b2188057e6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a22ab171-46f9-4a6f-9609-d2e389b493b9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16037,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/mochawesome-report",
+        "reportPageTitle": "Project Frame Report",
+        "embeddedScreenshots": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
