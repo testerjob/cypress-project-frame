@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-03-27T06:29:01.950Z",
-    "end": "2023-03-27T06:29:21.296Z",
-    "duration": 19346,
+    "start": "2023-03-27T20:32:40.607Z",
+    "end": "2023-03-27T20:32:58.213Z",
+    "duration": 17606,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "97be7f98-8f9d-48d6-8bdc-6d9b8a8688ef",
+      "uuid": "115f152c-0d39-4443-88f9-2a33680e1cfe",
       "title": "",
       "fullFile": "cypress/e2e/login_positive.cy.js",
       "file": "cypress/e2e/login_positive.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "f3c20821-84a7-4a53-90d9-a13dd45fe6af",
+          "uuid": "453a7cf2-df06-44e4-99a3-96b2188057e6",
           "title": "Positive: Successful login & logout tests",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Successful login & Successful logout TC#: PFS-1, PFS-8",
               "fullTitle": "Positive: Successful login & logout tests Successful login & Successful logout TC#: PFS-1, PFS-8",
               "timedOut": null,
-              "duration": 17535,
+              "duration": 16037,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Screenshot\",\n        \"value\": \"/login_positive.cy.js/sign_in_button_check1.png\"\n      },\n      {\n        \"title\": \"Screenshot\",\n        \"value\": \"/login_positive.cy.js/sign_in_button_check2.png\"\n      }\n    ]\n  ]\n}",
-              "code": "//Login PFS-1\nloginPage.navigateURL('https://www.hotels.com/');\nloginPage.navigateToSignIn();\nloginPage.clickSignInBlue();\nloginPage.enterUserName(globalEmail);\nloginPage.enterPassword(globalPassword);\nloginPage.clickSignInButton();\n//Login verification\ncy.get(loc.navigateTosignIn, {\n  timeout: 10000\n}).contains('button', 'Alexey').screenshot(\"sign_in_button_check1\");\ncy.get(loc.navigateTosignIn, {\n  timeout: 10000\n}).contains('button', 'Alexey').should('exist').debug();\n//Logout PFS-8\nloginPage.clickLogedInUserName();\nloginPage.clickSignOutButton();\n//Logout verification\ncy.get(loc.navigateTosignIn, {\n  timeout: 10000\n}).contains('button', 'Sign in').screenshot(\"sign_in_button_check2\");\ncy.get(loc.navigateTosignIn, {\n  timeout: 10000\n}).contains('button', 'Sign in').should('exist').debug();\ncy.end();",
+              "code": "//Login PFS-1\nloginPage.navigateURL('https://www.hotels.com/');\nloginPage.navigateToSignIn();\nloginPage.clickSignInBlue();\nloginPage.enterUserName(globalEmail);\nloginPage.enterPassword(globalPassword);\nloginPage.clickSignInButton();\n//Login verification\n//cy.get(loc.navigateTosignIn, {timeout:10000}).contains('button', 'Alexey').screenshot(\"sign_in_button_check1\")\n//cy.get(loc.navigateTosignIn, {timeout:10000}).contains('button', 'Alexey').should('exist').debug()\ncy.get('#secondaryNav').find('#gc-custom-header-nav-bar-acct-menu').contains('button', 'Alexey').screenshot(\"sign_in_button_check1\");\ncy.get('#secondaryNav').find('#gc-custom-header-nav-bar-acct-menu').contains('button', 'Alexey').should('exist').debug();\n//Logout PFS-8\nloginPage.clickLogedInUserName();\nloginPage.clickSignOutButton();\n//Logout verification\n//cy.get(loc.navigateTosignIn, {timeout:10000}).contains('button', 'Sign in').screenshot(\"sign_in_button_check2\")\n//cy.get(loc.navigateTosignIn, {timeout:10000}).contains('button', 'Sign in').should('exist').debug()\ncy.get('#secondaryNav').find('#gc-custom-header-nav-bar-acct-menu').contains('button', 'Sign in').screenshot(\"sign_in_button_check2\");\ncy.get('#secondaryNav').find('#gc-custom-header-nav-bar-acct-menu').contains('button', 'Sign in').should('exist').debug();\ncy.end();",
               "err": {},
-              "uuid": "41bb2728-d3a0-49a2-be61-896c30295917",
-              "parentUUID": "f3c20821-84a7-4a53-90d9-a13dd45fe6af",
+              "uuid": "a22ab171-46f9-4a6f-9609-d2e389b493b9",
+              "parentUUID": "453a7cf2-df06-44e4-99a3-96b2188057e6",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "41bb2728-d3a0-49a2-be61-896c30295917"
+            "a22ab171-46f9-4a6f-9609-d2e389b493b9"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 17535,
+          "duration": 16037,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
