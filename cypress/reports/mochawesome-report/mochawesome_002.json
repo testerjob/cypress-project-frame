@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-03-26T05:46:32.475Z",
-    "end": "2023-03-26T05:46:46.816Z",
-    "duration": 14341,
+    "start": "2023-03-27T06:29:32.158Z",
+    "end": "2023-03-27T06:29:43.953Z",
+    "duration": 11795,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "a170825c-70e9-451a-80c0-b5352e42122f",
+      "uuid": "503672f4-1191-4e61-81b1-ecf025e7afe4",
       "title": "",
       "fullFile": "cypress/e2e/search_by_property.cy.js",
       "file": "cypress/e2e/search_by_property.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "8f70d978-16f1-4fae-95c0-443babd1e226",
+          "uuid": "4bb9fa92-7771-4094-83b1-70b1f5065ea5",
           "title": "Search field - Where to go (not logged user): PFS-11,PFS-13",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Search field Where to go and search by property",
               "fullTitle": "Search field - Where to go (not logged user): PFS-11,PFS-13 Search field Where to go and search by property",
               "timedOut": null,
-              "duration": 12733,
+              "duration": 10204,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "//Positive search PFS-11\nwhereToGo.clickSearchField();\ncy.wait(500);\ncy.get(loc.search_field).type(text).type('{enter}');\nwhereToGo.clickSearchButton();\ncy.get('.uitk-heading-5', {\n  timeout: 10000\n}).contains('h3', 'Search by property name').should('exist');\n//Search by property name PFS-13\ncy.get(loc.search_by_property_field, {\n  timeout: 10000\n}).click();\ncy.wait(500);\ncy.get(loc.opened_property_search_field).type(hotel, {\n  force: true\n}).type('{enter}').should('have.value', hotel);\ncy.get('#playback-filter-pill-hotelName-Marriot').contains('Marriot').should('exist');\ncy.end();",
               "err": {},
-              "uuid": "82f46ff0-6096-470f-8aab-97eac13efafa",
-              "parentUUID": "8f70d978-16f1-4fae-95c0-443babd1e226",
+              "uuid": "5bdc1631-1513-47a4-ae00-a6599fec7c2f",
+              "parentUUID": "4bb9fa92-7771-4094-83b1-70b1f5065ea5",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "82f46ff0-6096-470f-8aab-97eac13efafa"
+            "5bdc1631-1513-47a4-ae00-a6599fec7c2f"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 12733,
+          "duration": 10204,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

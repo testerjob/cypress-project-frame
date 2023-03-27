@@ -6,7 +6,7 @@
   "scripts": {
     "pretest": "rimraf cypress/reports/mochawesome-report/*json",
     "test": "npm run run-cypress-test || npm run posttest",
-    "run-cypress-test": "cypress run",
+    "run-cypress-test": "cypress run --record --key e1017137-cf3b-4fea-8217-21085dafb320",
     "posttest": "npm run merge-reports && npm run generate-htmlreport",
     "cypress:open": "cypress open",
     "merge-reports": "mochawesome-merge ./cypress/reports/mochawesome-report/*json > cypress/reports/output.json",
