@@ -1,7 +1,7 @@
 export class Locators{
 
     //LOGIN
-    navigateTosignIn = 'button[class="uitk-button uitk-button-medium uitk-button-has-text uitk-button-tertiary uitk-menu-trigger"]'
+    navigateTosignIn = '#gc-custom-header-nav-bar-acct-menu'
     signin_menu_button = '[data-stid="link-header-account-signin"]'
     username_locator = '#loginFormEmailInput'
     password_locator = '#loginFormPasswordInput'
