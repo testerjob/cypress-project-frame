@@ -30,6 +30,7 @@ describe('Search field - Where to go (not logged user): PFS-11,PFS-13', () => {
         cy.get(loc.opened_property_search_field)
           .type(hotel, {force: true})
           .type('{enter}')
+        cy.get(loc.opened_property_search_field)
           .should('have.value', hotel)
         cy.get('#playback-filter-pill-hotelName-Marriot').contains('Marriot').should('exist')
         cy.end()
