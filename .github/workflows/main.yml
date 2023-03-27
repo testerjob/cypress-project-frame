@@ -6,10 +6,15 @@ jobs:
     steps: 
       - name: Checkout
         uses: actions/checkout@v3.4.0
+      - name: Write the cypress.env.json file from github secret
+        run: |
+          echo '${{ secrets.CYPRESS_ENV }}' > ./cypress/cypress.env.json
       - name: Cypress.io
         uses: cypress-io/github-action@v5.5.1
         with: 
           start: npm run test
+
+    
 
       
       
